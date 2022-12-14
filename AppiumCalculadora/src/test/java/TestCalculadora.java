@@ -12,12 +12,11 @@ public class TestCalculadora {
     @Test
     public static void testCalculadora() throws Exception {
 
-        DesiredCapabilities cap = new
-                DesiredCapabilities();
+        DesiredCapabilities cap = new DesiredCapabilities();
 
-        cap.setCapability("deviceName", "moto g_8_power"); //change to name of smartphone
+        cap.setCapability("deviceName", "SM G970F"); //change to name of smartphone
 
-        cap.setCapability("udid", "ZY227DVC42"); //console   adb devices
+        cap.setCapability("udid", "R28M20LPMAX"); //console   adb devices
 
         cap.setCapability("platformName", "Android");
 
@@ -83,3 +82,16 @@ public class TestCalculadora {
     }
 
 }
+
+//------------------------Appium
+/*
+
+    {
+        "deviceName": "SM G970F",
+        "udid": "R28M20LPMAX",
+        "platformName": "Android",
+        "platformVersion": "11",
+        "appPackage": "com.google.android.calculator",
+        "appActivity": "com.android.calculator2.Calculator"
+    }
+*/
