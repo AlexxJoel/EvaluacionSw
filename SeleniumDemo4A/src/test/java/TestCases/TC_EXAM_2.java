@@ -26,16 +26,17 @@ public class TC_EXAM_2 {
         excersice1.login(VariablesGlobales.USER_ADMINMINE, VariablesGlobales.USER_PASSWORDMINE);
         Thread.sleep(2000);
         excersice1.selection2();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         CommonMethods.takeScreenshot(driver, "TC_Examn02");
         Thread.sleep(3000);
         excersice1.articuloadminCategory();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         CommonMethods.takeScreenshot(driver, "TC_Examn02_Category");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         excersice1.articulo();
+        excersice1.getBtnArticulo().click();
 
-        Thread.sleep(4000);
+        Thread.sleep(1000);
         CommonMethods.takeScreenshot(driver, "TC_Examn02_Articulo");
         Thread.sleep(3000);
 

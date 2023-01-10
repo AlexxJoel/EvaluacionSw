@@ -20,7 +20,20 @@ public class Excersice1 {
      @FindBy(xpath = "//*[@id=\"entrarSistema\"]")
      private WebElement btnLogin;
 
+    @FindBy(xpath = "//*[@id=\"productoVenta\"]/option[7]")
+    private WebElement op2;
 
+    @FindBy(xpath = "//*[@id=\"clienteVenta\"]/option[87]")
+    private WebElement op1;
+
+    @FindBy(xpath = "//*[@id=\"btnAgregaVenta\"]")
+    private WebElement btnAgregarVenta;
+    @FindBy(xpath = "//*[@id=\"tablaVentasTempLoad\"]/table/caption/span")
+    private WebElement btnGenerar;
+    @FindBy(xpath = "//*[@id=\"ventasHechasBtn\"]")
+    private WebElement btnHechas;
+    @FindBy(xpath = "/html/body/div[3]/div[2]/div/div[4]/div[2]/button")
+    private WebElement modal;
 
      //
 
@@ -39,6 +52,8 @@ public class Excersice1 {
     @FindBy(xpath = "//*[@id=\"navbar\"]/ul/li[2]/ul/li[2]/a")
     private WebElement articulo;
 
+    @FindBy(xpath = "//*[@id=\"navbar\"]/ul/li[4]/a")
+    private WebElement solodArticulo;
 
 
 
@@ -125,6 +140,22 @@ public class Excersice1 {
     @FindBy(xpath = "//*[@id=\"btnAgregaArticulo\"]")
     private WebElement btnArticle;
 
+    //--------------------------------------------
+
+    @FindBy(xpath = "//*[@id=\"ventaProductosBtn\"]")
+    private WebElement sendArticle;
+
+
+    @FindBy(xpath = "//*[@id=\"ventaProductosBtn\"]")
+    private WebElement sCLient;
+    @FindBy(xpath = "//*[@id=\"ventaProductosBtn\"]")
+    private WebElement sProduct;
+    @FindBy(xpath = "//*[@id=\"tablaVentasTempLoad\"]/table/caption/span")
+    private WebElement sgnrvema;
+    @FindBy(xpath = "/html/body/div[3]/div[2]/div/div[4]/div[2]/button")
+    private WebElement alert;
+    @FindBy(xpath = "//*[@id=\"ventasHechasBtn\"]")
+    private WebElement ventaHecha;
 
 
 
@@ -192,7 +223,7 @@ public class Excersice1 {
 
     public void selection2() throws InterruptedException {
         clientes.click();
-        nombreCliente.sendKeys("Joel_Alejandro" + "+ _4A-DSM");
+        nombreCliente.sendKeys("Joel_Alejandro" + "_4A-DSM");
         apellidoCliente.sendKeys("Herrera_Herandez");
         direccionCliente.sendKeys("Cuernabaches");
         emailCLiente.sendKeys("20213tn019@utez.edu.mx");
@@ -224,10 +255,27 @@ public class Excersice1 {
         registerArticuloCantidad.sendKeys("1");
         registerArticuloPrice.sendKeys("200");
         registerArticuloIMG.sendKeys("C:\\Users\\joelh\\Downloads\\JoelDeveloper.png");
-        Thread.sleep(1000);
         btnArticle.click();
+        btnArticle.click();
+
     }
 
+
+    public void ventamade() throws InterruptedException {
+        adminstrarArticulo.click();
+        articulo.click();
+        Thread.sleep(2000);
+        op1.click();
+        op2.click();
+        Thread.sleep(2000);
+        btnAgregarVenta.click();
+        Thread.sleep(2000);
+        btnGenerar.click();
+        Thread.sleep(2000);
+        modal.click();
+        Thread.sleep(2000);
+        btnHechas.click();
+    }
 
 
 }
